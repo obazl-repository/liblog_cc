@@ -1,0 +1,15 @@
+cc_library(
+    name  = "logc",
+    linkstatic = True,
+    srcs  = ["log.c"],
+    hdrs = ["log.h"],
+    copts =  [
+        "-x", "c",
+        "-O2"
+    ] + select({
+        "@platforms//os:linux": ["-std=gnu11"],
+        "//conditions:default": ["-std=c11"],
+    }),
+    local_defines = ["LOG_USE_COLOR"],
+    visibility = ["//visibility:public"]
+)
