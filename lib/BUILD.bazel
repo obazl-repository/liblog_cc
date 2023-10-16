@@ -1,8 +1,9 @@
 cc_library(
     name  = "logc",
     linkstatic = True,
-    srcs  = ["log.c"],
-    hdrs = ["log.h"],
+    srcs  = ["liblogc.c"],
+    hdrs = ["liblogc.h"],
+    includes = ["."],
     copts =  [
         "-x", "c",
         "-O2"
