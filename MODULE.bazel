@@ -5,5 +5,5 @@ module(
     bazel_compatibility = [">=6.0.0"]
 )
 
-bazel_dep(name = "platforms", version = "0.0.7")
+bazel_dep(name = "platforms", version = "0.0.8")
 
